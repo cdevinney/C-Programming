@@ -5,4 +5,6 @@ Program Descriptions
 ====================
 helloWorld.c outputs the greeting "Hello, World"
 
-testVSCrun.c is a file to test VSCode running and commits to Github. It outputs "Does this work?"
+testVSCrun.c tests VSCode running and commits to Github. It outputs "Does this work?"
+
+helloName.c asks for the user's name and outputs "Hello, [name]!"
