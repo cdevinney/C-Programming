@@ -27,10 +27,12 @@ int getValidGuess()
 
 int main()
 {
-    int lower = -1, upper = 51, count = 1, userGuess, randomNumber, numberGuesses = 1;
+    int lower = -1, upper = 50, count = 1, userGuess, randomNumber, numberGuesses = 1;
 
+    /*
+    The random number is seeded from the current time.
+    */
     srand(time(0));
-
     randomNumber = getRandom(lower, upper, count);
 
     userGuess = getValidGuess();
