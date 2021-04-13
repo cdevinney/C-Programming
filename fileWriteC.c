@@ -1,31 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
+
+#define BUFFER_SIZE 10000
 
 int main()
 {
-    int n;
-    char *text;
-    FILE *fp;
-
-    printf("Enter limit of the text:\n");
-    scanf("%d", &n);
-    text=(char*)malloc(n*sizeof(char));
-
-    printf("Please type what you would like written to the file. When finished, hit 'Enter' and type 'EXIT'.\n");
-    
-    FILE *fopen(const char * fileWritingInC, const char * a);
-
-    while (text != "EXIT")
+    FILE *fptr;
+    fptr = fopen("fileWritingInC.txt", "a");
+    char i[BUFFER_SIZE];
+    printf("Please type what you would like to write to a file.\nWhen you are finished, hit 'Enter', type 'EXIT', and hit 'Enter' again.\n");
+    fgets(i, BUFFER_SIZE, stdin);
+    while (strcmp(i, "EXIT\n") != 0)
     {
-        scanf(" ");
-        gets(text);
-        fprintf(fp, text);
-        free(text);
+        fprintf(fptr, "%s", i);
+        fgets(i, BUFFER_SIZE, stdin);
     }
-
-    int fclose(FILE *fp);
-
-    printf("Your file, fileWritingInC.txt, has been written.\n");
-    
-    return 0; 
+    fclose(fptr);
+    printf("Your file, 'fileWritingInC.txt', has been written.\n");
+    return 0;
 }
