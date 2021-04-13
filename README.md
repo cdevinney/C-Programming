@@ -14,3 +14,5 @@ numberGuessing.c prompts a user to guess numbers between 1 and 50 until they gue
 fahrenheitToCelsius.c prompts the user to input a fahrenheit temperature and outputs the equivalent celsius temperature.
 
 reverseInput.c reverses a string of up to 100 characters using a for loop.
+
+fileWriteC.c writes input from a user to a file until the user inputs "EXIT".
