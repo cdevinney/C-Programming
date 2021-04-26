@@ -22,7 +22,7 @@ double getClassWeight(int numClasses)
     //Use a for loop and the numClasses value to read each class in the file for weighting and grade
     for (i = 1; i <= numClasses; i++) 
     {
-        //Read the weighting and grade of the class
+        //Read the weighting of the class
         fscanf(gradeRecord, "%s ", &classWeight);
 
         /*Replace whitespace in classWeight strings with null values
@@ -35,6 +35,7 @@ double getClassWeight(int numClasses)
         }
 
         //Using the string compare method, check the weighting of each class
+        //Read the grade of the class
         //Using the string compare method, check the grading of each class
         //Add the corresponding GPA number for each weight/grade combination to totalWeight
         if (strcmp(classWeight, "AP+") == 0)
